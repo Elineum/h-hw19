@@ -32,7 +32,7 @@ class RecipeBook {
   findRecipesArrByIngredients(ingredients) {
     return this.recipesArr
       .filter((recipe) =>
-        ingredients.some((ingredient) =>
+        ingredients.every((ingredient) =>
           recipe.ingredients.includes(ingredient)
         )
       )
